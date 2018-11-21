@@ -1,0 +1,5 @@
+require(stats)
+m <- matrix(rnorm(50, 0, 1), 5, 5)
+m
+(centered.m <- scale(m, scale = FALSE)) 
+cov(centered.scaled.m <- scale(m))
