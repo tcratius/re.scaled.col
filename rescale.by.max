@@ -1,0 +1,9 @@
+library(scales)
+m <- matrix(rnorm(50, 0, 1), 5, 5)
+
+max.rescale <- function(m, max){
+  matrix <- mapply(function(x){rescale(x = m, to = c(0,max))}, m)
+  return(matrix)
+}
+
+max.rescale(m, 100)
